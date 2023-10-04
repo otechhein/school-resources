@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Example 3</title>
+		<style>
+			/* Simple Selector */
+			h1 {
+				color: #e74c3c; /* Text color */
+				text-align: center; /* Text alignment */
+				font-size: 36px; /* Font size */
+				background-color: #f2f2f2; /* Background color */
+			}
+
+			/* Descendant Selector */
+			ul li {
+				background: #f9f9f9; /* Background color */
+				font-size: 18px; /* Font size */
+				border: 1px solid #3498db; /* Border */
+			}
+
+			/* Child Selector */
+			ul > li {
+				border: 1px solid #3498db; /* Border for direct children of ul */
+			}
+
+			/* Adjacent Sibling Selector */
+			h2 + p {
+				font-style: italic; /* Italicize the paragraph following h2 */
+			}
+
+			/* General Sibling Selector */
+			p ~ p {
+				color: #27ae60; /* Change text color for siblings of p */
+			}
+
+			/* Attribute Selector ([attribute="value"]) */
+			input[type="text"] {
+				border: 2px solid red; /* Border color for text inputs */
+				width: 100%; /* Input width to fill the container */
+				background-color: #f2f2f2; /* Background color for text inputs */
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Welcome to CSS Example 3</h1>
+
+		<ul>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+			<li>List item 4</li>
+			<li>List item 5</li>
+		</ul>
+
+		<h2>Section Title</h2>
+		<p>This is a paragraph.</p>
+		<p>This is another paragraph.</p>
+
+		<h2>Additional Content</h2>
+		<ul>
+			<li>List item A</li>
+			<li>List item B</li>
+			<li>List item C</li>
+		</ul>
+
+		<h2>Section Title 2</h2>
+		<p>This is a paragraph in section 2.</p>
+		<p>This is another paragraph in section 2.</p>
+
+		<form>
+			<label for="name">Name:</label>
+			<input
+				type="text"
+				id="name"
+				name="name"
+				placeholder="Enter your name"
+			/>
+		</form>
+	</body>
+</html>

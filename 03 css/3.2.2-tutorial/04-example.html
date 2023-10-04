@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Example</title>
+		<style>
+			/* Font Properties */
+			body {
+				font-family: Arial, sans-serif; /* Specify font family */
+				font-size: 16px; /* Set font size */
+				color: #333; /* Text color */
+			}
+
+			/* Box Model Properties */
+			.container {
+				width: 600px;
+				margin: 20px auto;
+				padding: 20px;
+				background-color: #f2f2f2;
+			}
+
+			.box {
+				width: 100%;
+				padding: 20px;
+				background-color: #3498db;
+				margin: 10px 0;
+			}
+
+			/* Background Properties */
+			.image-box {
+				background-image: url("background.jpg"); /* Background image */
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				height: 300px;
+			}
+
+			/* Opacity Property */
+			.transparent {
+				opacity: 0.7; /* Set opacity */
+			}
+
+			/* Unit Values */
+			.unit-values {
+				width: 80%;
+				margin: 2em auto;
+				padding: 1em;
+				background-color: #e74c3c;
+				color: white;
+			}
+
+			/* Inherit, Initial, Unset, and Revert Values */
+			.inherit {
+				font-size: inherit; /* Inherits font size from parent */
+				color: initial; /* Resets color to initial value */
+				width: unset; /* Resets width property */
+				height: revert; /* Reverts height property */
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSS Example</h1>
+
+		<!-- Box Model Properties Example -->
+		<div class="container">
+			<div class="box">
+				<p>
+					This is a nested box with specified width, height, margin,
+					and padding.
+				</p>
+			</div>
+			<div class="box transparent">
+				<p>This box has reduced opacity.</p>
+			</div>
+		</div>
+
+		<!-- Background Properties Example -->
+		<div class="image-box">
+			<h2 class="transparent">Background Image Example</h2>
+		</div>
+
+		<!-- Unit Values Example -->
+		<div class="unit-values container">
+			<p>
+				This box uses various unit values for margin, padding, width,
+				and height.
+			</p>
+		</div>
+
+		<!-- Inherit, Initial, Unset, Revert Example -->
+		<div class="inherit container">
+			<p>
+				This box uses inherit, initial, unset, and revert values for
+				properties.
+			</p>
+		</div>
+	</body>
+</html>

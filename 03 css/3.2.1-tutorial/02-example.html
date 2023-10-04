@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Example</title>
+		<style>
+			/* Simple Selector */
+			h1 {
+				color: #3498db; /* Text color */
+				text-align: center; /* Text alignment */
+			}
+
+			/* Combinator Selector (Child Selector) */
+			ul > li {
+				background: #f2f2f2; /* Background color */
+				font-size: 16px; /* Font size */
+			}
+
+			/* Pseudo-class Selector (:hover) */
+			a:hover {
+				color: #e74c3c; /* Text color on hover */
+				text-decoration: underline; /* Underline on hover */
+			}
+
+			/* Pseudo-element Selector (::before) */
+			p::before {
+				content: "📣"; /* Insert emoji before the paragraph content */
+				margin-right: 5px; /* Add space between emoji and text */
+			}
+
+			/* Attribute Selector ([attribute="value"]) */
+			input[type="text"] {
+				border: 2px solid #3498db; /* Border color for text inputs */
+				width: 100%; /* Input width to fill the container */
+				background-color: #f9f9f9; /* Background color for text inputs */
+			}
+
+			/* Pseudo-class Selector (:nth-child) */
+			li:nth-child(even) {
+				background-color: #27ae60; /* Background color for even list items */
+				color: #fff; /* Text color for even list items */
+			}
+
+			/* Attribute Selector ([attribute^="value"]) */
+			a[href^="https"] {
+				color: #3498db; /* Change color for links starting with "https" */
+			}
+
+			/* Attribute Selector ([attribute$="value"]) */
+			a[href$=".pdf"] {
+				background-color: #f39c12; /* Highlight links to PDF files */
+				color: #fff; /* Text color for PDF links */
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Welcome to CSS Example</h1>
+
+		<ul>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+			<li>List item 4</li>
+			<li>List item 5</li>
+		</ul>
+
+		<a href="#">Hover over me</a>
+
+		<p>Adds an emoji before this paragraph.</p>
+
+		<form>
+			<label for="name">Name:</label>
+			<input
+				type="text"
+				id="name"
+				name="name"
+				placeholder="Enter your name"
+			/>
+		</form>
+
+		<p>Check out these links:</p>
+		<ul>
+			<li><a href="https://www.example.com">External Link</a></li>
+			<li><a href="document.pdf">Download PDF</a></li>
+			<li><a href="page.html">Internal Link</a></li>
+		</ul>
+	</body>
+</html>

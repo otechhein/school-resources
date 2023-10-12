@@ -1,0 +1,177 @@
+/* change body background */
+body{
+    background:#25a9fc;
+}
+/* change body background */
+
+/* change box background */
+.box{
+    position: relative;
+    margin:auto;
+    display: block;
+    margin-top:8%;
+    width:600px;
+    height: 420px;
+    background:none;
+}
+/* change box background */
+
+/* change head background */
+.head{
+    position: absolute;
+    top:16.5%;
+    left: 25%;
+    width:50%;
+    height:67%;
+    background:#A6becf;
+    border-radius: 50%;    
+
+}
+/* change head background */
+/* change head copy background */
+.head-copy{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background:#a6becf;
+    border-radius: 50%;
+    z-index:2;
+}
+/* change head copy background */
+/* change ear left background */
+.ear-left{
+    position: absolute;
+    width: 60%;
+    height: 65%;
+    left:-20%;
+    top:5%;
+    background:#a6becf;
+    border-radius: 50%;
+    z-index: 1;
+}
+/* change ear left background */
+/* change ear right background */
+.ear-right{
+    position: absolute;
+    width: 60%;
+    height: 65%;
+    right: -20%;
+    top: 5%;
+    background: #A6BECF;
+    border-radius: 50%;
+    z-index: 1;
+  
+  }
+  
+/* change ear right background */
+
+/* change inner ear background */
+.inner-ear{
+    position: absolute;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    background: #819CAF;
+  }
+/* change inner ear background */
+
+/* change eye left background */
+.eye-left{
+    position: absolute;
+    background: white;
+    width: 30%;
+    height: 33%;
+    top: 25%;
+    left: 21%;
+    border-radius: 50%;
+    z-index: 3;
+  }
+/* change eye left background */
+
+/* change eye right background */
+.eye-right{
+    position: absolute;
+    background: white;
+    width: 30%;
+    height: 33%;
+    top: 25%;
+    right: 21%;
+    border-radius: 50%;
+    z-index: 3;
+  }
+  
+/* change eye right background */
+
+/* change pupil background */
+.pupil{
+    position: absolute;
+    width: 28%;
+    height: 30%;
+    top: 35%;
+    left: 36%;
+    border-radius: 50%;
+    background: #27354A;
+  
+  }
+/* change pupil background */
+
+/* change nose background */
+
+.nose{
+    position: absolute;
+    background: #BE845F;
+    width: 25%;
+    height: 42.5%;
+    left: 37%;
+    top: 45%;
+    border-radius: 50px;
+    z-index: 4;
+  }
+  
+/* change nose background */
+
+/* change hair left background */
+.hair-left{
+    position: absolute;
+    top: -8%;
+    left: 30%;
+    width: 20%;
+      height: 20%;
+      background:  #A6BECF;
+      -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+/* change hair left background */
+
+/* change hair right background */
+.hair-right{
+    position: absolute;
+    top: -4%;
+    left: 48%;
+    width: 20%;
+      height: 20%;
+      background:  #A6BECF;
+      -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+/* change hair right background */
+
+/* change media background */
+@media all and (max-width: 600px) {
+    .box{
+      position: relative;
+      margin: auto;
+      display: block;
+      margin-top: 2%;
+      width: 400px;
+      height: 280px;
+      background: none;
+  
+    }
+  }
+/* change media background */
+

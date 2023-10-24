@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav</title>
+    <style>
+        #page{
+            display: grid;
+            width: 100%;
+            height: 90vh;
+            color:#fff;
+            grid-template-areas:"nav head" "nav main" "foot foot";
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 100px 1fr 80px;
+
+        }
+        #page > header {
+            grid-area: head;
+            background-color: lightblue;
+        }
+        #page > nav {
+            grid-area: nav;
+            background-color: blueviolet;
+        }
+        #page > main {
+            grid-area: main;
+            background-color:burlywood;
+        }
+        #page > footer {
+            grid-area: foot;
+            background-color: darkgray;
+        }
+        .container{
+            display:flex;
+            flex-direction: column;
+            
+            padding: 20px;
+             background-color:white;
+        }
+        .main1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(230px, 1fr));  
+            padding: 20px;
+            justify-content: center;
+            gap: 20px;
+            
+        }
+        .main1 .box1 {
+            width: 130px;
+            height: 140px;
+            border: 1px solid green;
+            text-align: center;
+            color: black;
+            
+
+        }
+        .main2{
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+          
+          
+            padding: 20px;            
+            gap: 20px;
+        }
+        .main2 > div {            
+            text-align: center;
+            padding: 20px 0;
+            color: black;
+        }
+        .main2 .box2 {
+            
+            border: 1px solid rgb(111, 0, 128);
+            border-radius: 10px;
+            /* grid-column:  1 / 1; */
+            height: 140px;
+            
+        }
+        .main2 .box3 {
+            border-radius: 10px;
+            border: 1px solid rgb(69, 90, 210);
+            height: 140px;
+            width: 130px;
+        }
+        .main3{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 20px;            
+            gap: 20px;
+            color: black;
+            text-align: center;
+        }
+        .main3 .box4 {
+            /* width:300px; */
+            max-width: 350px;
+            height: 100px;
+            border: 1px solid red;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="page">
+        <header>Header</header>
+        <nav>Nav item</nav>
+        <main>
+            <div class="container">
+                <div class="main1">
+                    
+                    <div class="box1">1</div>
+                    <div class="box1">2</div>
+                    <div class="box1">3</div>
+                    <div class="box1">4</div>
+                    <div class="box1">5</div>    
+                </div>
+                <div class="main2">
+                    <div class="box2">6</div>
+                    <div class="box3">7</div>                       
+                </div>
+                <div class="main3">
+                    <div class="box4">8</div>
+                    <div class="box4">9</div> 
+                    <div class="box4">10</div>                      
+                </div>
+            </div>
+           
+        </main>
+        <footer>Footer</footer>
+    </section>
+    
+</body>
+</html>

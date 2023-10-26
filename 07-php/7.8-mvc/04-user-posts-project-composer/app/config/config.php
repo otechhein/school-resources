@@ -1,6 +1,7 @@
 <?php
 // DB Params
 define('DB_HOST', 'localhost');
+define('DB_PORT', '3306');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', '02_oop_mvc');
@@ -8,7 +9,7 @@ define('DB_NAME', '02_oop_mvc');
 // App Root
 define('APPROOT', dirname(dirname(__FILE__)));
 // URL Root
-define('URLROOT', 'http://localhost/otechnique/otmm-school-resources/07-php/7.8-mvc/03-user-posts-project');
+define('URLROOT', 'http://localhost:8000');
 // Site Name
 define('SITENAME', 'Emmizy MVC Frame');
 // App Version

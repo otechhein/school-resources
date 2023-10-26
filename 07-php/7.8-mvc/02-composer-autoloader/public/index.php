@@ -16,10 +16,10 @@ try{
 
 
 $path = $_SERVER['REQUEST_URI'];
-
+// var_dump($path);
 $url = $path == "/" ? 'user/index' : ltrim($path, '/');
 
-var_dump($url);
+// var_dump($url);
 
 list($controllerName, $action) = explode('/', $url);
 

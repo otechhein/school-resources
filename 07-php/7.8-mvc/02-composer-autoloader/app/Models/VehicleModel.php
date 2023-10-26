@@ -13,7 +13,7 @@ class VehicleModel
 
     public function getVehicles()
     {
-        $query = "SELECT * FROM users";
+        $query = "SELECT * FROM vechicles";
         $stmt = $this->pdo->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);

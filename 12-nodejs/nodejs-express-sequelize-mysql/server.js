@@ -32,6 +32,9 @@ sequelize
 //   console.log("Drop and re-sync db.");
 // });
 
+const passport = require("passport");
+require("./app/strategies/jwt.strategy.js")(passport);
+
 // simple route
 app.get("/", (req, res) => {
 	res.json({ message: "Welcome to NodeJS Express Application !." });
@@ -39,6 +42,7 @@ app.get("/", (req, res) => {
 
 // register routes
 require("./app/routes/shop.routes.js")(app);
+require("./app/routes/auth.routes.js")(app);
 
 // set port, listen for requests
 const PORT = config.app.port;

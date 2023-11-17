@@ -1,6 +1,6 @@
 const { checkSchema, validationResult } = require("express-validator");
 
-const { extractObject, validate } = require("../utils/helper.js");
+const { extractObject } = require("../utils/helper.js");
 
 const createValidator = async (req, res, next) => {
 	await checkSchema({

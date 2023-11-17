@@ -24,5 +24,6 @@ const sequelize = new Sequelize(
 );
 
 const shopRepo = require("./shop.model.js")(sequelize);
+const userRepo = require("./user.model.js")(sequelize);
 
-module.exports = { sequelize, shopRepo };
+module.exports = { sequelize, shopRepo, userRepo };

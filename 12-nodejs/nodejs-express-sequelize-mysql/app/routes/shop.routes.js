@@ -1,3 +1,4 @@
+const passport = require("passport");
 const { create } = require("../controllers/shop.controller.js");
 const { createValidator } = require("../validators/shop.validator.js");
 const { Router } = require("express");
@@ -8,7 +9,11 @@ const shopRoutes = (app) => {
 	router
 		.route("/")
 		// .get(shopController().findAll)
-		.post(createValidator, create);
+		.post(
+			passport.authenticate("jwt", { session: false }),
+			createValidator,
+			create
+		);
 	// .delete(shopController().destroyAll);
 
 	// router

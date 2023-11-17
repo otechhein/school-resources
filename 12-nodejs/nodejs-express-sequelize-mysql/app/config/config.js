@@ -1,4 +1,5 @@
 const database = require("../../database.json");
+const bcrypt = require("bcryptjs");
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -14,5 +15,11 @@ module.exports = {
 			acquire: 30000,
 			idle: 10000,
 		},
+	},
+	hash: {
+		salt: bcrypt.hashSync(process.env.HASH_SALT, 8),
+	},
+	jwt: {
+		secret: process.env.JWT_SECRET,
 	},
 };

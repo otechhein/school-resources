@@ -8,7 +8,9 @@
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "migration:create": "npx sequelize-cli migration:generate --name ",
-    "migration:run": "npx sequelize-cli --config database.json db:migrate"
+    "migration:run": "npx sequelize-cli --config database.json db:migrate",
+    "seeder:create": "npx sequelize-cli seed:generate --name ",
+    "seeder:run": "npx sequelize-cli db:seed:all"
   },
   "keywords": [
     "nodejs",

@@ -22,4 +22,11 @@ module.exports = {
 	jwt: {
 		secret: process.env.JWT_SECRET,
 	},
+	mail: {
+		service: process.env.MAIL_SERVICE,
+		port: process.env.MAIL_PORT,
+		secure: true,
+		username: process.env.MAIL_USERNAME,
+		password: process.env.MAIL_PASSWORD,
+	},
 };

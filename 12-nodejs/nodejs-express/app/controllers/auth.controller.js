@@ -2,17 +2,27 @@ const config = require("../config/config.js");
 const { userRepo } = require("../models/index.js");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const {
+	transportUserRegistrationSuccessMail,
+} = require("../services/mail.service.js");
 
 const register = async (req, res) => {
-	const hashedPassword = await bcrypt.hash(
-		req.body.password,
-		config.hash.salt
-	);
+	const { name, email, password } = req.body;
+	const hashedPassword = await bcrypt.hash(password, config.hash.salt);
 
 	const user = {
 		...req.body,
 		password: hashedPassword,
 	};
+
+	try {
+		transportUserRegistrationSuccessMail(email, {
+			name,
+		});
+	} catch (error) {
+		console.log(error, "...error email sent....");
+		return res.status(400).send("Email not sent");
+	}
 
 	// Save Tutorial in the database
 	return userRepo

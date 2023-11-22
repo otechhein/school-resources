@@ -17,7 +17,7 @@ const registerValidator = async (req, res, next) => {
 		return res.status(400).send({ errors });
 	}
 
-	req.body = extractObject(req.body, ["name", "email", "password"]);
+	req.body = extractObject(req.body, ["name", "email", "password", "image"]);
 
 	next();
 };

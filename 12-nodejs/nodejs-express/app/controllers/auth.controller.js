@@ -9,14 +9,22 @@ const {
 	generateUserRegistrationSuccessPdf,
 } = require("../services/pdf.service.js");
 
+const {
+	storeUserImage,
+	generateImageStaticLink,
+} = require("../services/file.service.js");
+
 const register = async (req, res) => {
-	const { name, email, password } = req.body;
+	const { name, email, password, image } = req.body;
 
 	const hashedPassword = await bcrypt.hash(password, config.hash.salt);
+
+	const userImage = storeUserImage(image);
 
 	const user = {
 		...req.body,
 		password: hashedPassword,
+		image: userImage,
 	};
 
 	// Save user
@@ -42,6 +50,10 @@ const register = async (req, res) => {
 					},
 				],
 			});
+
+			data.image = data.image
+				? generateImageStaticLink(data.image)
+				: null;
 
 			// return res.download("public/user-registration-success.pdf");
 

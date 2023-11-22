@@ -13,6 +13,9 @@ const userModel = (sequelize) => {
 			password: {
 				type: Sequelize.STRING,
 			},
+			image: {
+				type: Sequelize.STRING,
+			},
 		},
 		{
 			paranoid: true,

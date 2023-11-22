@@ -5,9 +5,13 @@ const jwt = require("jsonwebtoken");
 const {
 	transportUserRegistrationSuccessMail,
 } = require("../services/mail.service.js");
+const {
+	generateUserRegistrationSuccessPdf,
+} = require("../services/pdf.service.js");
 
 const register = async (req, res) => {
 	const { name, email, password } = req.body;
+
 	const hashedPassword = await bcrypt.hash(password, config.hash.salt);
 
 	const user = {
@@ -15,20 +19,32 @@ const register = async (req, res) => {
 		password: hashedPassword,
 	};
 
-	try {
-		transportUserRegistrationSuccessMail(email, {
-			name,
-		});
-	} catch (error) {
-		console.log(error, "...error email sent....");
-		return res.status(400).send("Email not sent");
-	}
-
-	// Save Tutorial in the database
+	// Save user
 	return userRepo
 		.create(user)
-		.then((user) => {
+		.then(async (user) => {
 			const { password, ...data } = user.dataValues;
+
+			const pdfName = `${data.id}-user-registration-success.pdf`;
+			await generateUserRegistrationSuccessPdf(
+				"app/templates/pdfs/user-registration-success.hbs",
+				{ name },
+				`public/${pdfName}`
+			);
+
+			transportUserRegistrationSuccessMail(email, {
+				name,
+				attachments: [
+					{
+						filename: pdfName,
+						path: `public/${pdfName}`,
+						contentType: "application/pdf",
+					},
+				],
+			});
+
+			// return res.download("public/user-registration-success.pdf");
+
 			return res.send(data);
 		})
 		.catch((err) => {

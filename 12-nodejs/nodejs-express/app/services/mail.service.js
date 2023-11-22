@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 const hbs = require("nodemailer-express-handlebars");
 const config = require("../config/config");
+const fs = require("fs");
 
 const transporter = nodemailer.createTransport({
 	service: config.mail.service,
@@ -22,27 +23,37 @@ transporter.use(
 	hbs({
 		viewEngine: {
 			extname: ".hbs",
-			layoutsDir: "app/templates/",
+			layoutsDir: "app/templates/mails/",
 			defaultLayout: false,
-			partialsDir: "app/templates/",
+			partialsDir: "app/templates/mails/",
 		},
-		viewPath: "app/templates/",
+		viewPath: "app/templates/mails/",
 		extName: ".hbs",
 	})
 );
 
-const transportUserRegistrationSuccessMail = (to, context) => {
-	console.log(to, context, "....cont....");
+const transportUserRegistrationSuccessMail = (
+	to,
+	{ attachments, ...context }
+) => {
 	transporter.sendMail(
 		{
-			from: "O-Technique Developer<toetet@o-technique-myanmar.com>",
+			from: `O-Technique Developer<${config.mail.username}>`,
 			to,
 			subject: "User Registration Success !",
 			template: "user-registration-success",
 			context,
+			attachments,
 		},
 		() => {
-			res.status(200).send("User Registration Success Email sent");
+			console.log("....User Registration Success Email Sent.....");
+			fs.unlink(attachments[0].path, (err) => {
+				if (err)
+					console.log(
+						err,
+						"...User Registration Success Unlink File Error...."
+					);
+			});
 		}
 	);
 };

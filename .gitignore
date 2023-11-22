@@ -2,3 +2,4 @@
 12-nodejs/nodejs-express/.env
 12-nodejs/nodejs-express/database.json
 12-nodejs/nodejs-express/package-lock.json
+12-nodejs/nodejs-express/public/storage

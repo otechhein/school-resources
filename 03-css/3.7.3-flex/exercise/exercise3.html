@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header, footer {
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #3498db;
+        }
+        .content {
+            flex: 1;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <div class="main-content">
+            <div class="sidebar">Sidebar</div>
+            <div class="content">Main Content</div>
+        </div>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+let num1 = 10;
+let num2 = 20;
+
+if (num1 == 30)
+{
+	num2 += 20;
+}
+else if (num1 > 5)
+{
+	num2 += 20 * 20;
+}	
+else 
+{
+	
+	num2 -= 10;
+}
+
+
+let num3 = 30;
+const num4 = 10;
+if (num3 == 40)
+{
+	num2 += 20;
+}
+else if (num3 >= 50)
+{
+	num2 += num4 * 20;
+}
+else if(num3 == "30")
+{
+	num4 = 20 * 20;	
+}	
+else 
+{
+	
+	num2 *= 10;
+}
+
+let num3=30;
+let num4=40;
+switch (num3)
+{
+ case 1:
+ num4 +=10;	
+ break;
+
+ case 2:
+ num4 -= 10;
+ break;
+ 
+ default:
+ num4 +=5;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

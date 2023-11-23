@@ -1,0 +1,43 @@
+<html>
+<head>
+	<style>
+		.container{
+			
+			display : flex;
+			height : 500px;
+			flex direction : column;
+			align-items : baseline;
+			background-color: red;
+			
+			
+		
+		}
+		
+		.container > div {
+			background-color: #f1f1f1;
+			width : 100px;
+			margin: 10px;
+			padding : 10px;
+			font-size: 30px;
+			text-align :center;
+			
+		}
+			
+		
+		
+	</style>
+</head>
+<body>
+	<div class ="container">
+		
+			<div><h1>1</h1></div>
+			<div><h3>2</h3></div>
+			<div><small>3</small></div>
+			<div><h6>4</h6></div>
+			
+			
+			
+		
+	</div>
+</body>
+</html>

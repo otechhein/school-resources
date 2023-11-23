@@ -1,0 +1,21 @@
+
+
+.container 
+{
+	display: flex;
+	height: 300 px;
+	width: 800 px;
+	border: 1 px;
+	margin-top:50 px; 
+	background-color: red;
+	justify-content: center;
+}
+
+.form
+{
+	
+	width: 50 px;
+	align-items: center;
+	background-color: gray;
+	
+} 

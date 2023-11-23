@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para" ></p>
+    <script>
+        var x = 12;
+        {
+          var x = 20;	
+        }
+        let y = 30;
+        {
+          let y = 15;
+          var z = x + 18; 
+        }
+        document.getELementById("para").innerHTML = z + y;
+        
+    </script>
+</body>
+</html>

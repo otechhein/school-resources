@@ -1,0 +1,46 @@
+body
+{
+    background-color: #DCF5FF;
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container
+{
+    width: 20%;
+    border-radius: 10px;
+    background-color: white;
+    
+}
+
+.container .inner
+{
+    background-color: lightskyblue;
+    padding: 1em;
+    border-radius: 10px;
+    width: 100%;
+    clip-path: circle(1% at 0% 0%);
+    transition: clip-path 0.5s ease-in-out;
+    
+}
+
+.container:hover .inner
+{
+    clip-path: circle(90%);
+}
+
+h1
+{
+    font-size:20px;
+    color: white;
+}
+
+p
+{
+    font-size: 19px;
+    color: white;
+}

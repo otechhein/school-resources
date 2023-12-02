@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+       header{
+        background-color: #464444;
+        padding: 30px;
+        text-align: center;
+        font-size:35px;
+        color: white;
+       }
+       nav{
+        float: left;
+        width: 25%;
+        height: 500px;
+        background: #CCC;
+        padding:20px;
+       }
+       article{
+        float:right;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 500px;
+       }
+       section::after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Social Link</h3>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Google</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Telegram</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Simple</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Necessitatibus, impedit a,
+                eum incidunt beatae maxime magnam consectetur ipsam odio veniam ad omnis, dicta ea non porro dolor mollitia unde repellat.
+            </p>
+        </article>
+    </section>
+    <footer>
+        <p>footer</p>
+    </footer>
+
+    
+</body>
+</html>

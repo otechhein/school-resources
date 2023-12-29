@@ -10,17 +10,17 @@ npm install
 ```
 
 ###Serving
-if you don't have <b>npx</b>, you need to install it first.
+if you don't have <b>parcel-bundler</b>, you need to install it first.
 
 ```
-npx parcel index.html
+parcel index.html
 ```
 
 ###Production
 build the project
 
 ```
-npx parcel build index.html
+parcel build index.html
 ```
 
 To serve production build in local, you require <b>http-server</b> package. After installing that, in your <b>dist</b> directory, run <b>http-server</b>.

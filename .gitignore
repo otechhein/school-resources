@@ -6,6 +6,10 @@
 10-javascript-advanced/02-memory-card-games/node_modules
 
 # 12-nodejs
+## 12-1-2-creating-web-server/03-routing/node_modules
+12-nodejs/12-1-2-creating-web-server/05-nodemon/node_modules
+
+## nodejs-express
 12-nodejs/nodejs-express/node_modules
 12-nodejs/nodejs-express/.env
 12-nodejs/nodejs-express/database.json

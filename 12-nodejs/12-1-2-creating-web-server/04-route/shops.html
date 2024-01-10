@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Shops</title>
+		<style>
+			/* Add your CSS styles here */
+			.shop {
+				border: 1px solid #ccc;
+				padding: 10px;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Shops</h1>
+		<div id="shops-list">
+			<!-- Shop data will be inserted here dynamically -->
+		</div>
+
+		<script>
+			// Fetching JSON data dynamically and inserting into HTML
+			const shopsData = JSON.parse(`DATA`);
+
+			const shopsList = document.getElementById("shops-list");
+			shopsData.forEach((shop) => {
+				const shopDiv = document.createElement("div");
+				shopDiv.classList.add("shop");
+				shopDiv.innerHTML = `<h2>${shop.name}</h2><p>Location: ${shop.location}</p>`;
+				shopsList.appendChild(shopDiv);
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Base Example</title>
+</head>
+<style>
+    #main {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #f20000;
+    display: flex;
+    }
+
+#main div {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50px;
+}
+
+#main div:nth-of-type(2) {
+  flex-basis: 100px;
+}
+</style>
+<body>
+    <h1>The flex-basis Property</h1>
+    <p>
+        <span style="color: red; background-color:orange; font-size: 20px;">flex-base</span> is
+         <u style="text-decoration-color:red;">take more size of original flex-basis: 50px defind size</u > so that select child div element is more bigger than other div element <span style="background-color:rgb(223, 174, 84)">(more number and more bigger)</span>.<br>
+        Note: Total size must equal size(px) of parent element size (not over 300px of main div). flex:1 mean all flex-grow, flex-shrink, and flex-basis take equal grow, equal shrink and equal base.<br>
+        If Flex-base take more over size than parent flexbox size and flex item are over flow parent div.
+        
+    </p>
+    <div id="main">
+        <div style="background-color:coral;">50px</div>
+        <div style="background-color:lightblue;">100px</div>
+        <div style="background-color:khaki;">50px</div>
+        <div style="background-color:pink;">50px</div>
+        <div style="background-color:lightgrey;">50px</div>
+      </div>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-shrink example</title>
+</head>
+<style> 
+    #main {
+      width: 350px;
+      height: 100px;
+      border: 1px solid #c3c3c3;
+      display: flex;
+    }
+    
+    #main div {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 100px;
+    }
+    
+    #main div:nth-of-type(2) {
+      flex-shrink: 3;
+    }
+    </style>
+<body>
+    <h1>The flex-shrink Property</h1>
+    <p>
+        <span style="color: red; background-color:orange; font-size: 20px;">flex-grow</span> is <u style="text-decoration-color:red;">increase size </u > then original defind size <span style="background-color:rgb(223, 174, 84)">(more number and more bigger)</span>.<br>
+        <span style="color: rgb(0, 255, 8); background-color:rgb(60, 0, 255); font-size: 20px;">flex-shrink </span>is <u style="text-decoration-color:red;">decrease size</u> then original defind size <span style="background-color:rgb(223, 174, 84)">(more number and smaller than original size)</span>.
+    </p>
+    <div id="main">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:khaki;"></div>
+        <div style="background-color:pink;"></div>
+        <div style="background-color:lightgrey;"></div>
+      </div>
+    
+</body>
+</html>

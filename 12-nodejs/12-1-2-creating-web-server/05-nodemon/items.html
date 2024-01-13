@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Items</title>
+		<style>
+			/* Add your CSS styles here */
+			.item {
+				border: 1px solid #ccc;
+				padding: 10px;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Items</h1>
+		<div id="items-list">
+			<!-- item data will be inserted here dynamically -->
+		</div>
+
+		<script>
+			// Fetching JSON data dynamically and inserting into HTML
+			const itemsData = JSON.parse(`DATA`);
+
+			const itemsList = document.getElementById("items-list");
+			itemsData.forEach((item) => {
+				const itemDiv = document.createElement("div");
+				itemDiv.classList.add("item");
+				itemDiv.innerHTML = `<h2>${item.name}</h2><p>Price: ${item.price}</p>`;
+				itemsList.appendChild(itemDiv);
+			});
+		</script>
+	</body>
+</html>

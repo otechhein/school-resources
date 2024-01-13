@@ -1,0 +1,18 @@
+$foreColor: black;
+
+h1
+{
+    size: 100px;
+    color: $foreColor;
+}
+
+
+a{
+    color: red;
+
+    &:hover {
+        text-decoration: none;
+        border-bottom: 1px double black;
+        padding: 10px;
+    }
+}

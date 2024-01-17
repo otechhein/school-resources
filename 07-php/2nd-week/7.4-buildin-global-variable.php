@@ -1,18 +1,28 @@
 <?php
 /*
-    1. $GLOBALS
-    2. $_SERVER
-    3. $_REQUEST
-    4. $_POST
-    5. $_GET
-    6. $_FILES
-    7. $_ENV
-    8. $_COOKIE
-    9. $_SESSION
+    1. $GLOBALS[]
+    2. $_SERVER[]
+    3. $_REQUEST[]
+    4. $_POST[]
+    5. $_GET[]
+    6. $_FILES[]
+    7. $_ENV[]
+    8. $_COOKIE[]
+    9. $_SESSION[]
  */
 
 // 1. $GLOBALS
 // An associative array containing references to all variables which are currently defined in the global scope of the script. The variable names are the keys of the array.
+
+$firstname = "John";
+
+function printName(){
+    global $firstname;
+    echo $firstname . "Doe";
+}
+
+printName();
+
 
 // 2. $_SERVER Super Global Array
 echo $_SERVER['PHP_SELF'] . "<br>";

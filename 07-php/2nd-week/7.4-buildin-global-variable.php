@@ -14,14 +14,16 @@
 // 1. $GLOBALS
 // An associative array containing references to all variables which are currently defined in the global scope of the script. The variable names are the keys of the array.
 
-$firstname = "John";
+$firstname = "John"; // Global
 
 function printName(){
-    global $firstname;
-    echo $firstname . "Doe";
+    // global $firstname;
+    // echo "<pre>";
+    // var_dump($GLOBALS);
+    echo $GLOBALS['firstname'] . " Doe";
 }
 
-printName();
+// printName();
 
 
 // 2. $_SERVER Super Global Array
@@ -51,14 +53,14 @@ echo "<a href='https://www.w3schools.com/php/php_superglobals_server.asp' target
  * Unlike a cookie, the information is not stored on the users computer.
  */
 // Form အခန်းရောက်ရင် Detail ရှင်းပြပါမယ်။
-// 8. $_FILES
+// 8. $_FILES[]
 /**
  * HTTP File Upload variables
  * An associative array of items uploaded to the current script via the HTTP POST method
  */
 // 9. $_ENV
 putenv("GREETING=HelloWorld");
-echo $_ENV['GREETING'];
+// echo $_ENV['GREETING'];
 // you may need additional configuration to make the environment variable persistent across multiple requests. If you're still facing issues, check your server configuration and ensure that it allows setting and reading environment variables in the way you intend.
 
 

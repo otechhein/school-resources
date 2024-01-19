@@ -12,6 +12,9 @@
             max-width: 400px;
             margin: 40px auto;
         }
+        a{
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -23,6 +26,11 @@
             <!-- <button type="submit" name="submit" class="w-100 btn btn-lg btn-primary">Login</button> -->
             <input type="submit" name="submit" value="Submit" class="w-100 btn btn-lg btn-primary">
         </form>
+        <div class="register-form">
+            <button class="btn btn-large btn-primary w-100 mt-3">
+                <a href="./register.php">Register</a>
+            </button>
+        </div>
     </div>
 </body>
 </html>

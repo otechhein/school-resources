@@ -17,7 +17,7 @@
     <input type="submit" value="Submit">
 </form> -->
 
-<form method="post" action="process.php">
+<form method="post" action="process-filter.php">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username"><br><br>
     <label for="age">Age:</label>

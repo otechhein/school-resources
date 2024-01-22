@@ -48,7 +48,7 @@ $students = file_get_contents('./student-list.txt');
 // die();
 $path = './student-list.txt';
 if (!file_exists($path)) {
-    header("Location: back.php");
+    header("Location: home.php");
 }else{
     $file_handle = fopen($path, 'w');
     if (fwrite($file_handle, "John Doe")) {

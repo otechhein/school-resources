@@ -2,10 +2,11 @@
 
 session_start();
 
-if(isset($_SESSION['user'])){
-    // echo "<a href='_actions/logout.php'>Logout</a>";
-}else{
-    echo "Session Not Found";
+if(!isset($_SESSION['user'])){
+    header("location: index.php");
+    // echo "You are not logined. After 3 seconds, you will get back login page.";
+    // header("Refresh: 3; url = index.php");
+    exit();
 }
 ?>
 

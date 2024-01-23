@@ -37,7 +37,7 @@
 //    }
 
 // New Object Create
-   $dog = new Animal();
+//    $dog = new Animal();
 
 class Car {
     public $model;
@@ -54,20 +54,37 @@ $car = new Car("Toyata");
 echo $car->model;
 echo $car->startEngine();
 
-class Animal {
-    public $name;
-
-    public function run(){
-        echo "$this->name is running ...";
-    }
-}
-
 /*
 Access Modifier
 1. public
 2. private
 3. protected
 */
+
+class Animal {
+    protected $name;
+
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+
+    public function run(){
+        echo "$this->name is running ...";
+    }
+}
+
+class Dog extends Animal{
+    public function bark(){
+        echo "$this->name : Woof ... Woof";
+    }
+}
+
+$bobby = new Dog("Bobby");
+$bobby -> run();
+$bobby -> bark();
+echo "Test";
+
 
 // Constructor ကို အမြဲတမ်း public နဲ့ သုံးရမယ်။
 
@@ -83,6 +100,7 @@ class Animal2 {
 }
 echo Animal2::$type;
 Animal2::info();
+
 
 
 

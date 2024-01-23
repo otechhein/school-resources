@@ -32,10 +32,8 @@ Build a simple task management system using PHP. The application should allow us
             $_SESSION['tasks'] = [];
         }
 
-        if ($_SESSION['tasks']) {
-            unset($_SESSION['tasks']);
-            session_destroy();
-        }
+        // unset($_SESSION['tasks']);
+
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['due_date'])) {
@@ -43,14 +41,13 @@ Build a simple task management system using PHP. The application should allow us
                     'title' => $_POST['title'],
                     'description' => $_POST['description'],
                     'due_date' => $_POST['due_date'],
-                    'status' => 'Incomplete',
                 ];
 
                 $_SESSION['tasks'][] = $newTask;
-                file_put_contents('tasks.txt', serialize($_SESSION['tasks']));
             }
         }
         ?>
+
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="mb-4">
             <div class="mb-3">
                 <label for="title" class="form-label">Task Title:</label>
@@ -66,33 +63,27 @@ Build a simple task management system using PHP. The application should allow us
             </div>
             <button type="submit" class="btn btn-primary">Add Task</button>
         </form>
+        <button class="btn btn-outline-danger mb-5"><a href="./delete.php" class="link-danger ">Clear All</a></button>
 
         <!-- Task List -->
         <h3 class="mb-4">Task List</h3>
-        <ul class="list-group">
+        <ul class="list-group mb-5">
             <?php
-            // echo "<pre>";
-            // var_dump($_SESSION['tasks']);
-            // exit; 
+            if (!empty($_SESSION['tasks'])) :
+                foreach ($_SESSION['tasks'] as $task) :
             ?>
+                    <li class="list-group-item">
+                        <strong>Title:</strong> <?php echo $task['title']; ?><br>
+                        <strong>Description:</strong> <?php echo $task['description']; ?><br>
+                        <strong>Due Date:</strong> <?php echo $task['due_date']; ?><br>
+                    </li>
             <?php
-            if(!empty($_SESSION['tasks'])) : 
-            foreach ($_SESSION['tasks'] as $task) : 
-            ?>
-                <li class="list-group-item">
-                    <strong>Title:</strong> <?php echo $task['title']; ?><br>
-                    <strong>Description:</strong> <?php echo $task['description']; ?><br>
-                    <strong>Due Date:</strong> <?php echo $task['due_date']; ?><br>
-                    <strong>Status:</strong> <?php echo $task['status']; ?>
-                </li>
-            <?php
-            endforeach; 
+                endforeach;
             endif;
             ?>
         </ul>
     </div>
 
-    <!-- Include Bootstrap 5 JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
 

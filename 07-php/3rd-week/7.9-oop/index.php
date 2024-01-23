@@ -15,20 +15,20 @@
   * There are some key concepts and components
   */
   /**
-   * Classes
-   * Objects
-   * Properties (Attributes)
-   * Access Modifiers
-   * Method
-   * Static
-   * Namespace
-   * Interface
-   * Inheritance
-   * Trait
-   * Abstract
-   * Polymorphism
-   * Exception
-   * Design Patterns
+   * 1. Classes
+   * 2. Objects
+   * 3. Properties (Attributes)
+   * 4. Access Modifiers
+   * 5. Method
+   * 6. Static
+   * 7. Namespace
+   * 8. Interface
+   * 9. Inheritance
+   * 10. Trait
+   * 11. Abstract
+   * 12. Polymorphism
+   * 13. Exception
+   * 14. Design Patterns
    */
 
 // Creating a Class
@@ -36,23 +36,34 @@
 //     // 
 //    }
 
+   /**
+    * 1. Properties (Variable)
+    * 2. Methods (Function)
+    */
+
+
 // New Object Create
 //    $dog = new Animal();
 
-class Car {
-    public $model;
-    // The __construct method is a special method called a constructor
-    public function __construct($model){
-        $this->model = $model;
-    }
+// class Car {
+//     // public $model;
+//     // The __construct method is a special method called a constructor
+//     public function __construct(public $model, public $color){
+//         // echo "Object Created" . "<br>";
+//         // $this->model = $model;
+//     }
 
-    public function startEngine(){
-        return "Engine started for {$this->model}.";
-    }
-}
-$car = new Car("Toyata");
-echo $car->model;
-echo $car->startEngine();
+//     public function startEngine(){
+//         return "Engine started for {$this->model}.";
+//     }
+// }
+// $car = new Car("Toyata", "Red"); // Object
+// $car2 = new Car("BMW", "Blue"); //
+// echo $car2->model . "<br>";
+// echo $car2->color . "<br>";
+// echo $car2->startEngine();
+
+// exit;
 
 /*
 Access Modifier
@@ -80,10 +91,10 @@ class Dog extends Animal{
     }
 }
 
-$bobby = new Dog("Bobby");
+$bobby = new Dog("Aung Nat");
 $bobby -> run();
 $bobby -> bark();
-echo "Test";
+exit;
 
 
 // Constructor ကို အမြဲတမ်း public နဲ့ သုံးရမယ်။

@@ -62,8 +62,8 @@ Build a simple task management system using PHP. The application should allow us
                 <input type="date" name="due_date" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary">Add Task</button>
+            <button class="btn btn-outline-danger"><a href="./delete.php" class="link-danger ">Clear All</a></button>
         </form>
-        <button class="btn btn-outline-danger mb-5"><a href="./delete.php" class="link-danger ">Clear All</a></button>
 
         <!-- Task List -->
         <h3 class="mb-4">Task List</h3>

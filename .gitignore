@@ -8,6 +8,13 @@
 # 12-nodejs
 ## 12-1-2-creating-web-server/03-routing/node_modules
 12-nodejs/12-2-creating-web-server/05-nodemon/node_modules
+12-nodejs/12-4-express/12-4-1-routing/node_modules
+12-nodejs/12-4-express/12-4-1-routing/node_modules
+12-nodejs/12-4-express/12-4-2-middleware/00-built-in-middleware/node_modules
+12-nodejs/12-4-express/12-4-2-middleware/01-chaining-middleware/node_modules
+12-nodejs/12-4-express/12-4-2-middleware/02-error-handling/node_modules
+12-nodejs/12-4-express/12-4-3-environment/node_modules
+12-nodejs/12-5-building-REST/00-tutorial/node_modules
 
 ## nodejs-express
 12-nodejs/nodejs-express/node_modules

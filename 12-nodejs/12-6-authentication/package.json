@@ -1,0 +1,41 @@
+{
+  "name": "nodejs-express-authentication",
+  "version": "1.0.0",
+  "description": "Node.js Authentication",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration:create": "npx sequelize-cli migration:generate --name ",
+    "migration:run": "npx sequelize-cli --config database.json db:migrate",
+    "seeder:create": "npx sequelize-cli seed:generate --name ",
+    "seeder:run": "npx sequelize-cli db:seed:all"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest",
+    "api",
+    "sequelize",
+    "mysql"
+  ],
+  "author": "O-Technique Developer",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "moment": "^2.29.4",
+    "mysql2": "^2.3.3",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "sequelize": "^6.32.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1",
+    "sequelize-cli": "^6.6.2"
+  }
+}

@@ -6,7 +6,7 @@ exports.getAllShops = async (req, res) => {
 	try {
 		const keyword = req.query.name;
 		let shops;
-		console.log(keyword);
+
 		let condition = {};
 		if (keyword) {
 			condition = { name: { [Sequelize.Op.like]: `%${keyword}%` } };

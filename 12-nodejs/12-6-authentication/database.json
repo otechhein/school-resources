@@ -1,0 +1,8 @@
+{
+    "username": "root",
+    "password": null,
+    "database": "s_12_6_authentication",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+}

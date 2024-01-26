@@ -4,6 +4,7 @@
  * Polymorphism is a concept in OOP that allows objects of different classes to be treated as objects of a common base class. This means you can use a single interface (like a method or property) to represent different types of objects.
  * treat different objects like they're all the same kind.
  * There are two ways.
+ * 
  * 1. Overriding
  * 2. Interfaces
  */
@@ -32,8 +33,9 @@ $cat = new Cat();
 $dog->printInfo();
 $cat->printInfo();
 
+
 interface Shape {
-    public function calculateArea();
+    public function calculateArea();  // Abstract
 }
 
 class Circle implements Shape {

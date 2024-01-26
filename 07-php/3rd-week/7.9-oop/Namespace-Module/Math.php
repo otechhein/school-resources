@@ -1,5 +1,5 @@
 <?php
-// namespace Math;
+namespace Math;
 /* With Sub Namespace */
 // namespace Math\Basic;
 

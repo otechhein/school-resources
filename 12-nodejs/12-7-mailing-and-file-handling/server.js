@@ -7,11 +7,6 @@ const config = require("./app/config/config.js");
 
 const app = express();
 
-// var corsOptions = {
-// 	origin: "http://localhost:8081",
-// };
-// app.use(cors(corsOptions));
-
 // parse requests of content-type - application/json
 app.use(express.json());
 
@@ -43,8 +38,8 @@ app.get("/", (req, res) => {
 });
 
 // register routes
-require("./app/routes/shop.routes.js")(app);
 require("./app/routes/auth.routes.js")(app);
+require("./app/routes/shop.routes.js")(app);
 
 // set port, listen for requests
 const PORT = config.app.port;

@@ -16,7 +16,9 @@
 12-nodejs/12-4-express/12-4-3-environment/node_modules
 12-nodejs/12-5-building-REST/node_modules
 12-nodejs/12-6-authentication/node_modules
-12-nodejs/12-6-authentication/public/storage
+12-nodejs/12-7-mailing-and-file-handling/node_modules
+12-nodejs/12-7-mailing-and-file-handling/public/storage
+12-nodejs/12-7-mailing-and-file-handling/.env
 
 ## nodejs-express
 12-nodejs/nodejs-express/node_modules

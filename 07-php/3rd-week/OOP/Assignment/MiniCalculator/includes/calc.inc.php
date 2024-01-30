@@ -14,6 +14,7 @@ $calc = new Calc($operation, (int)$num1, (int)$num2);
 // var_dump($calc);die;
 
 try{
+    echo "Result" . "<br>";
     echo $calc->calculator();
 }catch(TypeError $e){
     echo "Error!: " . $e->getMessage();

@@ -3,9 +3,9 @@ const {
 	create,
 	findAll,
 	findOne,
-	update,
 	destroy,
 	destroyAll,
+	update,
 } = require("../controllers/shop.controller.js");
 const {
 	createValidator,
@@ -27,7 +27,7 @@ const shopRoutes = (app) => {
 	router
 		.route("/:id")
 		.get(findOne)
-		// .put(updateValidator, update)
+		.put(updateValidator, update)
 		.delete(destroy);
 
 	app.use("/api/shops", router);

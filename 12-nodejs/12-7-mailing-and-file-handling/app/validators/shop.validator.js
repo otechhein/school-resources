@@ -3,7 +3,23 @@ const { extractObject } = require("../utils/helper.js");
 
 const createValidator = async (req, res, next) => {
 	await checkSchema({
-		title: { isLength: { options: { min: 8 } } },
+		title: { isLength: { options: { min: 2, max: 100 } } },
+		description: { isLength: { options: { min: 8, max: 255 } } },
+	}).run(req);
+
+	const { errors } = validationResult(req);
+	if (errors.length) {
+		return res.status(400).send({ errors });
+	}
+
+	req.body = extractObject(req.body, ["title", "description", "published"]);
+
+	next();
+};
+
+const updateValidator = async (req, res, next) => {
+	await checkSchema({
+		title: { isLength: { options: { min: 2, max: 100 } } },
 		description: { isLength: { options: { min: 8, max: 255 } } },
 	}).run(req);
 
@@ -19,4 +35,5 @@ const createValidator = async (req, res, next) => {
 
 module.exports = {
 	createValidator,
+	updateValidator,
 };

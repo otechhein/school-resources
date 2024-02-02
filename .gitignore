@@ -16,13 +16,10 @@
 12-nodejs/12-4-express/12-4-3-environment/node_modules
 12-nodejs/12-5-building-REST/node_modules
 12-nodejs/12-6-authentication/node_modules
-12-nodejs/12-7-mailing-and-file-handling/node_modules
-12-nodejs/12-7-mailing-and-file-handling/public/storage
-12-nodejs/12-7-mailing-and-file-handling/.env
-
-## nodejs-express
-12-nodejs/nodejs-express/node_modules
-12-nodejs/nodejs-express/.env
-12-nodejs/nodejs-express/database.json
-12-nodejs/nodejs-express/package-lock.json
-12-nodejs/nodejs-express/public/storage
+12-nodejs/12-7-mailing/node_modules
+12-nodejs/12-7-mailing/.env
+12-nodejs/12-8-static-file-and-base64/12-8-1-static-file/node_modules
+12-nodejs/12-8-static-file-and-base64/12-8-2-base64/node_modules
+12-nodejs/12-9-final-project/node_modules
+12-nodejs/12-9-final-project/public/storage
+12-nodejs/12-9-final-project/.env

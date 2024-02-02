@@ -1,4 +1,3 @@
-// const fs = require("fs");
 const fsExtra = require("fs-extra");
 const moment = require("moment/moment.js");
 const { generateNumber } = require("../utils/helper.js");

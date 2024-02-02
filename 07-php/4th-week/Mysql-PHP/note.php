@@ -54,6 +54,25 @@
 // You can reference
 // https://websitebeaver.com/php-pdo-vs-mysqli
 
+
+/**
+ * ATTR_PERSISTENT
+   Imagine you're calling a friend. `PDO::ATTR_PERSISTENT` is like deciding whether to keep the call open or hang up after each sentence.
+   - If set to true, it's like keeping the call open for faster chatting.
+   - If set to false, it's like hanging up after every sentence and redialing for the next one.
+   So, it's a setting in programming that chooses between keeping a connection open (persistent) or closing it after each use (non-persistent).
+ */
+
+ /**
+  * i	- corresponding variable has type int
+    d	- corresponding variable has type float
+    s	- corresponding variable has type string
+    b	- corresponding variable is a blob and will be sent in packets
+  */
+
+
+
+
  
 
 

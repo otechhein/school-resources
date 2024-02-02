@@ -1,21 +1,15 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'demo');
-
-if(mysqli_connect_errno()){
-    // Connection Failed
-    echo 'Failed to connect to MySQL' . mysqli_connect_errno();
-    exit();
-}else{
-    echo "OK";
-}
+require_once "db.php";
 
 $query = "SELECT * FROM users";
-
 $results = mysqli_query($conn, $query);
-
 $users = mysqli_fetch_all($results, MYSQLI_ASSOC);
 
+// echo '<pre>';
+// var_dump($users);
+// echo '</pre>';
+// exit;
 ?>
 
 <!DOCTYPE html>

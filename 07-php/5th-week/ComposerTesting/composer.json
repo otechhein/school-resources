@@ -1,0 +1,19 @@
+{
+    "name": "otech/testing",
+    "description": "OtechniqueMyanmar",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Otech\\Testing\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hein"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "laravel/laravel": "^10.3"
+    }
+}

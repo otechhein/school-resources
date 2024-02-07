@@ -18,8 +18,8 @@
 12-nodejs/12-6-authentication/node_modules
 12-nodejs/12-7-mailing/node_modules
 12-nodejs/12-7-mailing/.env
-12-nodejs/12-8-static-file-and-base64/12-8-1-static-file/node_modules
-12-nodejs/12-8-static-file-and-base64/12-8-2-base64/node_modules
+12-nodejs/12-8-static-file-and-base64/12-8-3-static-file/node_modules
+12-nodejs/12-8-static-file-and-base64/12-8-4-base64/node_modules
 12-nodejs/12-9-final-project/node_modules
 12-nodejs/12-9-final-project/public/storage
 12-nodejs/12-9-final-project/.env

@@ -1,0 +1,45 @@
+Node Objects
+
+• Root Node // html and doctype
+• Element Node //object tree inside each nodes
+• Parent Node //html 
+• Child Node //body head
+• Text Node //inside p -- words sentences
+• Decedent Node // inside head or body 
+
+//Root Node
+<!DOCTYPE html>
+<html lang="en">
+    
+    //Element Node --each node in object tree are called element node
+
+    //head is child node and html is parent node
+    <head>
+        <title>This is DOM</title>
+    </head>
+    <body>
+
+        // h1 and p are Decedent node ထပ်ဆင့်Node
+        <h1>Let's learn about DOM</h1>
+        <p>DOM is a Documented Object Model // p ထဲ မှာ  ရှိ တဲ့ စာ က Text Node. 
+        <a href="#">A Link</a>
+        </p>
+    </body>
+</html>
+class id tag ---  method
+div a p li ol 
+
+• document.getElementById() #
+• document.getElementsByTagName()
+• document.getElementsByClassName() .
+
+• document.querySelector() - choose one element to use  //class selector , id selector, attribute selector
+• document.querySelectorAll() 
+
+
+DOM (CRUD)
+c = create , r = read , u = update , d = delete
+create html elements 
+read html elements 
+update html elements 
+delete html elements

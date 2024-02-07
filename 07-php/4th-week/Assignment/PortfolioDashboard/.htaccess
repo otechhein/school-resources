@@ -1,0 +1,6 @@
+ErrorDocument 404 /website/pages/404.php
+RewriteEngine on
+
+RewriteRule ^(home)$ index.php?page=$1 [L,QSA]
+RewriteRule ^(contact)$ index.php?page=$1 [L,QSA]
+RewriteRule ^(about)$ index.php?page=$1 [L,QSA]

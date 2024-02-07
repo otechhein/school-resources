@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Element Selector Example</title>
+    <style>
+        p::first-letter {
+           font-size: 150%;
+           color:rgb(128, 0, 0);
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>This is a paragraph 1 inside the parent Element.</p>
+        <p>This is a paragraph 2 inside the parent Element.</p>
+        <div>
+            <p>This is a paragraph 3 inside the parent Element.</p>
+        </div>
+    </div>
+    <p>This is a paragraph 4 outside the parent Element.</p>
+    <p>This is a paragraph 5 outside the parent Element.</p>
+</body>
+</html>

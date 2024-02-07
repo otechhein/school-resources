@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layoutWithTable</title>
+    <style>
+        header {
+            background-color: rgb(160, 160, 160);
+            padding:20px;
+            text-align: center;
+            font-size:30px;
+            color:white;
+          
+
+        }
+        header nav li{
+            display: inline;
+        }
+        header nav ul {
+            list-style: none;
+            
+        }
+        #home{
+            height:70vh;
+            padding:100px;
+            background-color: rgb(220, 220, 220);
+
+        }
+        .homearticle1{
+            float:left;
+            width:50%;
+            align-items: center;
+            text-align: right;
+            padding:10px;          
+
+        }  
+        .homearticle1 .hi {
+            color: red;
+            font-size: 30px;
+        }  
+        .homearticle1 .d {
+            color: rgb(247, 0, 255);
+            font-size: 30px;
+        }  
+        .homearticle1 .name {
+            color: rgb(60, 0, 255);
+            font-size: 30px;
+        }  
+        .homearticle1 .hi {
+            color: red;
+            font-size: 30px;
+        }
+        .homearticle1 .backend {
+            background-color: orange;
+        }   
+        
+        .homearticle2{
+            float:left;
+            width:40%;
+            align-items: center;
+            padding:10px;
+
+        }
+        #about-us{
+            height:70vh;
+            padding:100px;
+            background-color: rgb(255, 255, 255);
+
+        }
+        .aboutusarticle1{
+            float:left;
+            width:50%;
+            align-items: center;
+            padding:10px;
+        }
+        .aboutusarticle2{
+            float:left;
+            width:40%;
+            align-items: center;
+            
+            padding:10px;   
+        }
+        .aboutusarticle2 h2 {
+            text-align:center;
+        }
+
+        #education{
+            height:70vh;
+            padding:100px;
+            background-color: rgb(220, 220, 220);
+
+        }
+        .eduarticle1{
+            float:left;
+            width:50%;
+            align-items: center;
+            padding:10px;
+        } 
+        .eduarticle1 h2 {
+            text-align:center;
+        }
+  
+        .eduarticle2{
+            float:left;
+            width:40%;
+            align-items: center;            
+            padding:10px;   
+        }
+        footer {
+            background-color: rgb(160, 160, 160);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            }
+        #footer{
+            height: 200px;
+            
+
+        }
+        .footerarticle1{
+            float:left;
+            width: 40%;
+            padding:10px;
+        }
+        .footerarticle2{
+            float:left;
+            width: 40%;
+            padding:10px;
+        }
+       
+       
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>                
+                <li><a href="#education">Education</a></li>
+                
+               
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div id="home">
+            <article class="homearticle1">
+               <h2><span class="hi">Hi</span> <span class="d">!</span> My Name is <span class="name">Nickey</span></h2>
+               <p>
+                    I'am <span class="backend">BackEnd Developer</span><br>
+                    I'am working in O-Technique Myanmar
+               </p>
+
+            </article>
+            <article class="homearticle2">
+                <img src="/img/DSC03861-1m.png"  />
+
+            </article>
+
+        </div>
+        
+        <div id="about-us">
+            <article class="aboutusarticle1">
+                <img src="/img/aboutus.jpg" />
+
+            </article>
+            <article class="aboutusarticle2">
+                <h2>About Us</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dignissimos accusamus aliquam maiores quisquam debitis. Dolor, eos iusto dignissimos nesciunt necessitatibus tenetur, ratione esse, quam possimus similique debitis commodi neque.
+                </p>
+            </article>
+
+        </div>
+        <div id="education">
+            <article class="eduarticle1">
+                <h2>Education</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dignissimos accusamus aliquam maiores quisquam debitis. Dolor, eos iusto dignissimos nesciunt necessitatibus tenetur, ratione esse, quam possimus similique debitis commodi neque.
+                </p>
+            </article>
+            <article class="eduarticle2">
+                <img src="/img/font-end-developement.jpeg" width="650" height="500" />
+
+            </article>
+
+        </div>
+        
+       
+    </section>
+    <footer>
+        <div id="footer">
+            <article class="footerarticle1">
+                <h4>Simple</h4>
+                <p>
+                    <b>Nickey</b><br>
+                    <i>nickey@gmail.com</i>
+
+                </p>
+
+            </article>
+            <article class="footerarticle1">
+                <iframe
+                    width="50%"
+                    height="40%"
+                    frameborder="1"
+                    scrolling="no"
+                    src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=O-Technique Myanmar&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                >
+                </iframe>
+
+            </article>
+            
+        </div>
+    </footer>
+
+    
+    
+</body>
+</html>

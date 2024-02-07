@@ -1,0 +1,17 @@
+{
+  "name": "memory-cards-game-demo-1",
+  "version": "1.0.0",
+  "description": "Memory Cards Game Demo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "staticFiles": {
+    "staticPath": "static",
+    "watcherGlob": "**"
+  },
+  "author": "O-Technique Developer",
+  "license": "MIT",
+  "dependencies": {
+    "parcel": "^2.10.3"
+  }
+}

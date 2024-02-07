@@ -1,0 +1,17 @@
+{
+    "name": "otechnique/php-posts",
+    "description": "O-Technique PHP OOP MVC Posts Project",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "O-Technique Developer"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output2"></p>
+    <script>
+        // Exercise 2: Variable Scope and Shadowing
+        
+        let x = 5;
+        var y = 10;
+        
+        {
+            let x = 15;
+            {
+                let x = 20;
+                var y = 30;
+                
+               
+                document.getElementById("output2").innerHTML += "Inside the inner block:<br>";
+                document.getElementById("output2").innerHTML += "x = " + x + "<br>";
+                document.getElementById("output2").innerHTML += "y = " + y + "<br>";
+            }
+            
+           
+            document.getElementById("output2").innerHTML += "Inside the outer block:<br>";
+            document.getElementById("output2").innerHTML += "x = " + x + "<br>";
+            document.getElementById("output2").innerHTML += "y = " + y + "<br>";
+        }
+        
+        
+        document.getElementById("output2").innerHTML += "Outside all blocks:<br>";
+        document.getElementById("output2").innerHTML += "x = " + x + "<br>";
+        document.getElementById("output2").innerHTML += "y = " + y + "<br>";
+    </script>
+</body>
+</html>

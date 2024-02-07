@@ -7,7 +7,11 @@ $feedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
    
+<<<<<<< HEAD
   <h2>Feedback List</h2>
+=======
+  <h2>Past Feedback</h2>
+>>>>>>> a39dfbd0e06462bf6dee0dce9083ba0ed3071c23
 
   <?php if (empty($feedback)): ?>
     <p class="lead mt-3">There is no feedback</p>

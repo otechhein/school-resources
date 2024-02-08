@@ -6,9 +6,6 @@ $query = "SELECT * FROM users";
 $res = $conn->query($query);
 $users = $res->fetch_all(MYSQLI_ASSOC);
 
-echo '<pre>';
-var_dump($users);
-echo '</pre>';exit;
 ?>
 
 <!DOCTYPE html>

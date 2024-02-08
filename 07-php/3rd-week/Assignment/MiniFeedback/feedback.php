@@ -1,33 +1,32 @@
 <?php include 'inc/header.php'; ?>
 
 <?php
-$sql = 'SELECT * FROM feedback';
+$sql = 'SELECT * FROM feedbacks';
 $result = mysqli_query($conn, $sql);
-$feedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
-   
-<<<<<<< HEAD
-  <h2>Feedback List</h2>
-=======
-  <h2>Past Feedback</h2>
->>>>>>> a39dfbd0e06462bf6dee0dce9083ba0ed3071c23
 
-  <?php if (empty($feedback)): ?>
-    <p class="lead mt-3">There is no feedback</p>
-  <?php endif; ?>
+<h2>Feedback List</h2>
 
-  <?php foreach ($feedback as $item): ?>
-    <div class="card my-3 w-75">
-     <div class="card-body text-center">
-       <?php echo $item['body']; ?>
-       <div class="text-secondary mt-2">By <?php echo $item[
-         'name'
-       ]; ?> on <?php echo date_format(
-   date_create($item['date']),
-   'g:ia \o\n l jS F Y'
- ); ?></div>
-     </div>
-   </div>
-  <?php endforeach; ?>
+<?php if (empty($feedbacks)) : ?>
+  <p class="lead mt-3">There is no feedback</p>
+<?php endif; ?>
+
+<?php foreach ($feedbacks as $feedback) : ?>
+  <div class="card my-3 w-75">
+    <div class="card-body text-center">
+      <?php echo $feedback['body']; ?>
+      <div class="text-secondary mt-2">By <?php echo $feedback['name']; ?> on <?php echo date_format(
+                  date_create($feedback['date']),
+                  'g:ia \o\n l jS F Y'
+                ); ?>
+      </div>
+      <div class="mt-2">
+        <a href="./edit.php?id=<?=$feedback['id']?>" class="btn btn-warning">Edit</a>
+        <a href="actions/delete.php?id=<?=$feedback['id']?>" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+<?php endforeach; ?>
 <?php include 'inc/footer.php'; ?>

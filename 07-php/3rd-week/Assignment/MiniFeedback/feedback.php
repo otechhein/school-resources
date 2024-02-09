@@ -17,10 +17,10 @@ $feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <div class="card my-3 w-75">
     <div class="card-body text-center">
       <?php echo $feedback['body']; ?>
-      <div class="text-secondary mt-2">By <?php echo $feedback['name']; ?> on <?php echo date_format(
-                  date_create($feedback['date']),
-                  'g:ia \o\n l jS F Y'
-                ); ?>
+      <div class="text-secondary mt-2">By <?php echo $feedback['name']; ?> on <?php 
+        $date = new DateTime($feedback['date']);
+        echo $date->format('Y M d H:i:s');
+      ?>
       </div>
       <div class="mt-2">
         <a href="./edit.php?id=<?=$feedback['id']?>" class="btn btn-warning">Edit</a>

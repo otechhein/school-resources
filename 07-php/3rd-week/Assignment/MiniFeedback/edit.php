@@ -11,6 +11,10 @@
          $feeback = $results->fetch_all(MYSQLI_ASSOC);
        }
 
+//        echo '<pre>';
+//        var_dump($feeback);
+//        echo '</pre>';
+// die;
        if(!empty($feeback)){
          $id = $feeback[0]['id'];
          $name = $feeback[0]['name'];
@@ -48,10 +52,5 @@
         <input type="submit" name="submit" value="Update" class="btn btn-dark w-100">
     </div>
 </form>
-
-
-
-
-
 
 <?php include 'inc/footer.php'; ?>

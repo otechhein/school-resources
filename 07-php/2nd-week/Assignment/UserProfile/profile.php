@@ -1,56 +1,66 @@
 <?php
 
-session_start();
+include("vendor/autoload.php");
 
-if(!isset($_SESSION['user'])){
-    header("location: index.php");
-    // echo "You are not logined. After 3 seconds, you will get back login page.";
-    // header("Refresh: 3; url = index.php");
-    exit();
-}
+use Helpers\Auth;
+
+$auth = Auth::check();
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Profile</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+
 <body>
-    <div class="container mt-5">
-        <h1 class="mb-3"><?php !empty($_GET['username'])?$_GET['username'] : ''; ?></h1>
-        <?php if(isset($_GET['error'])) : ?>
-            <div class="alert alert-warning">
-                Can not upload file
-            </div>
-        <?php endif; ?>
+	<div class="container">
+		<h1 class="mt-5 mb-5">
+			<?= $auth->name ?>
+			<span class="fw-normal text-muted">
+				(<?= $auth->role ?>)
+			</span>
+		</h1>
 
-        <?php if(file_exists('./photos/profile.jpg')) : ?>
-            <img src="./photos/profile.jpg" alt="Profile Photo"  class="rounded-circle mb-3" width="200" height="200">
-        <?php endif; ?>
+		<?php if (isset($_GET['error'])) : ?>
+			<div class="alert alert-warning">
+				Cannot upload file
+			</div>
+		<?php endif ?>
 
-        <form action="_actions/upload.php" method="post" enctype="multipart/form-data">
-            <div class="input-group mb-3">
-                <input type="file" name="photo" id="photo" class="form-control">
-                <button class="btn btn-secondary">Upload</button>
-            </div>
-        </form>
+		<?php if ($auth->photo) : ?>
+			<img class="img-thumbnail mb-3" src="_actions/photos/<?= $auth->photo ?>" alt="Profile Photo" width="200">
+		<?php endif ?>
 
-        <ul class="list-group">
-            <li class="list-group-item">
-                <b>Email:</b>
-            </li>
-            <li class="list-group-item">
-                <b>Phone:</b>
-            </li>
-            <li class="list-group-item">
-                <b>Address:</b> Tamwe t
-            </li>
-        </ul>
-        <br>
-        <a href="_actions/logout.php">Logout</a>
-    </div>
+		<form action="_actions/upload.php" method="post" enctype="multipart/form-data">
+			<div class="input-group mb-3">
+				<input type="file" name="photo" class="form-control">
+				<button class="btn btn-secondary">Upload</button>
+			</div>
+		</form>
+
+		<ul class="list-group">
+			<li class="list-group-item">
+				<b>Email:</b> <?= $auth->email ?>
+			</li>
+			<li class="list-group-item">
+				<b>Phone:</b> <?= $auth->phone ?>
+			</li>
+			<li class="list-group-item">
+				<b>Address:</b> <?= $auth->address ?>
+			</li>
+		</ul>
+		<br>
+
+		<a href="admin.php">Manage Users</a> |
+		<a href="_actions/logout.php" class="text-danger">Logout</a>
+	</div>
 </body>
+
 </html>

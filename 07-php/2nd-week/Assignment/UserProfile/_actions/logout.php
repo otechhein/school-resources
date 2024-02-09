@@ -1,6 +1,10 @@
 <?php
 
-session_start();
+include("../vendor/autoload.php");
 
+use Helpers\HTTP;
+
+session_start();
 unset($_SESSION['user']);
-header('Location: ../index.php');
+
+HTTP::redirect("/index.php");

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactFormRequest;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -25,21 +26,16 @@ class ContactController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ContactFormRequest $request)
     {
         if ($request->all()) {
             $name = $request->input('name');
             $email = $request->input('email');
             $message = $request->input('message');
-
-            $person = [
-                $name,
-                $email,
-                $message
-            ];
-            dd($person);
         }
-        return view('contact-form');
+        
+        // Save To Database
+        // return view('success');
     }
 
     /**

@@ -23,15 +23,21 @@ class ContactFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:255',
+            'name' => 'required|alpha|max:255',
             'email' => 'required|email|max:255',
+            'message' => 'nullable|string',
         ];
     }
 
-    public function messages(){
+    public function messages()
+    {
         return [
             'name.required' => 'This field is required',
-            'name.string' => 'This field must be string'
+            'name.alpha' => 'This field must be a string',
+            'name.max' => 'This must not exceed 255 characters',
+            'email.required' => 'The email field is required',
+            'email.email' => 'Please enter a valid email address',
+            'email.max' => 'The email field must not exceed 255 characters',
         ];
     }
 }

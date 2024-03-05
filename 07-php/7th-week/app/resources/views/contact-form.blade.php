@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 @endpush
 
-
 @section('content')
     <div class="container mt-5">
         <h2>Contact Form</h2>
@@ -14,10 +13,15 @@
             @csrf
             <div class="form-group mt-3">
                 <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                <input type="text" class="form-control" id="name" placeholder=""
+                    class="@error('name') is-invalid @enderror">
                 {{-- @if ($errors->has('name'))
                     <div class="alert alert-danger">{{ $errors->first('name') }}</div>
                 @endif --}}
+                @error('name')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                {{-- <div class="alert alert-danger">{{ $message }}</div> --}}
             </div>
 
             <div class="form-group mt-3">

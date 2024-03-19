@@ -2,7 +2,8 @@
 
 require_once('./db.php');
 
-$sql = "INSERT INTO users (company_name, contact_name, address, city, postal_code, country) VALUES (:company_name, :contact_name, :address, :city, :postal_code, :country)";
+$sql = "INSERT INTO users (company_name, contact_name, address, city, postal_code, country) 
+VALUES (:company_name, :contact_name, :address, :city, :postal_code, :country)";
 
 // Prepare the statement
 $stmt = $conn->prepare($sql);

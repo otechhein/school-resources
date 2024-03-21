@@ -1,21 +1,25 @@
 import React from "react";
 
-function App() {
+const App = () => {
 	const scientists = [
-		{ name: "Ada Lovelace", field: "mathematician" },
-		{ name: "Marie Curie", field: "chemist" },
-		{ name: "Albert Einstein", field: "physicist" },
-		{ name: "Rosalind Franklin", field: "chemist" },
-		{ name: "Stephen Hawking", field: "astrophysicist" },
+		"Ada Lovelace",
+		"Marie Curie",
+		"Albert Einstein",
+		"Rosalind Franklin",
+		"Stephen Hawking",
 	];
 
-	const listItems = scientists.map((scientist, index) => (
-		<li key={index}>
-			{scientist.name} - {scientist.field}
-		</li>
-	));
+	const listItems = scientists.map((scientist) => <li>{scientist}</li>);
 
-	return <ul>{listItems}</ul>;
-}
+	return (
+		<>
+			<div>
+				<h2>List Map</h2>
+				<ul>{listItems}</ul>
+				<hr />
+			</div>
+		</>
+	);
+};
 
 export default App;

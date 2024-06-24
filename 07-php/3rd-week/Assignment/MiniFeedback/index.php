@@ -71,6 +71,9 @@ if (isset($_POST['submit'])) {
         <label for="email" class="form-label">Email</label>
         <input type="email" class="form-control <?php echo !$emailErr ?:
           'is-invalid'; ?>" id="email" name="email" placeholder="Enter your email" value="<?php echo $email; ?>">
+          <div id="" class="">
+          Please provide a valid email.
+        </div>
       </div>
       <div class="mb-3">
         <label for="body" class="form-label">Feedback</label>

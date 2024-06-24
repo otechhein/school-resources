@@ -19,7 +19,7 @@ $table = new UsersTable(new MySQL());
 
 if ($table) {
 	$table->insert($data);
-	HTTP::redirect("index.php", "registered=true");
+	HTTP::redirect("../index.php", "registered=true");
 } else {
 	HTTP::redirect("../register.php", "error=true");
 }
